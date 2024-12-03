@@ -27,8 +27,8 @@ teste = serie[serie.index >= corte_data]
 # Definindo os parâmetros do modelo (substitua por parâmetros ajustados para seu caso)
 s = 12  # Sazonalidade mensal
 model = SARIMAX(treino, 
-                order=(1, 1, 1), 
-                seasonal_order=(1, 1, 1, s), 
+                order=(1, 1, 2), 
+                seasonal_order=(1, 0, 1, s), 
                 enforce_stationarity=False, 
                 enforce_invertibility=False)
 
